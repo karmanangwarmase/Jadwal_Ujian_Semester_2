@@ -2,42 +2,49 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>JADWAL PAS 2025 SMA Muhammadiyah 1 Pulau Morotai</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 10px;
             background-color: #f5f5f5;
             color: #333;
+            font-size: 14px;
+            line-height: 1.4;
         }
         .container {
-            max-width: 100%;
+            width: 100%;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px;
-            margin-bottom: 20px;
+            padding: 10px;
+            margin-bottom: 15px;
+            overflow-x: hidden;
         }
         h1, h2 {
             text-align: center;
             color: #2c3e50;
+            margin: 0;
+            padding: 0;
         }
         h1 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             margin-bottom: 5px;
         }
         h2 {
-            font-size: 1.2rem;
-            margin-top: 0;
+            font-size: 1rem;
             margin-bottom: 15px;
             color: #7f8c8d;
         }
         .day-header {
             background-color: #3498db;
             color: white;
-            padding: 12px;
+            padding: 10px;
             margin: 5px 0;
             border-radius: 5px;
             font-weight: bold;
@@ -45,57 +52,66 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-size: 0.9rem;
         }
         .day-header:hover {
             background-color: #2980b9;
         }
         .day-header .date {
             font-weight: normal;
-            font-size: 0.9em;
+            font-size: 0.8em;
+            margin-left: 5px;
         }
         .day-content {
             display: none;
+            width: 100%;
+            margin-bottom: 10px;
             overflow-x: auto;
-            margin-bottom: 15px;
+            -webkit-overflow-scrolling: touch;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 5px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            min-width: 600px;
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 6px 3px;
             text-align: center;
+            word-break: break-word;
         }
         th {
             background-color: #3498db;
             color: white;
             font-weight: bold;
+            font-size: 0.8rem;
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
         .signature {
-            margin-top: 30px;
+            margin-top: 20px;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
         .signature-box {
-            width: 45%;
-            margin-top: 20px;
+            width: 48%;
+            margin-top: 15px;
+            font-size: 0.8rem;
         }
         .signature-name {
             font-weight: bold;
-            margin-top: 60px;
+            margin-top: 40px;
             border-top: 1px solid #333;
             padding-top: 5px;
             display: inline-block;
         }
         .arrow {
             transition: transform 0.3s;
+            font-size: 0.8rem;
         }
         .active .arrow {
             transform: rotate(180deg);
@@ -109,34 +125,61 @@
             margin: 10px 0;
             cursor: pointer;
             font-weight: bold;
+            width: 100%;
+            font-size: 0.9rem;
         }
         .supervisors-btn:hover {
             background-color: #27ae60;
         }
         .supervisors-container {
             display: none;
-            margin-top: 15px;
+            margin-top: 10px;
+            width: 100%;
+            overflow-x: auto;
         }
         .supervisors-table {
             width: 100%;
             border-collapse: collapse;
+            min-width: 300px;
         }
         .supervisors-table th {
             background-color: #e67e22;
+            font-size: 0.8rem;
         }
-        @media (max-width: 600px) {
-            table {
-                font-size: 0.8rem;
+        .supervisors-table td {
+            padding: 6px 8px;
+            text-align: left;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .container {
+                padding: 8px;
             }
-            th, td {
-                padding: 5px 3px;
+            h1 {
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 0.9rem;
+            }
+            .day-header {
+                padding: 8px;
+                font-size: 0.85rem;
             }
             .signature-box {
                 width: 100%;
+                margin-bottom: 15px;
             }
-            .day-header {
-                font-size: 0.9rem;
-                padding: 8px;
+            .signature-name {
+                margin-top: 30px;
+            }
+        }
+        
+        /* Landscape orientation */
+        @media screen and (orientation: landscape) {
+            .day-content {
+                max-height: 200px;
+                overflow-y: auto;
             }
         }
     </style>
@@ -393,7 +436,7 @@
         <!-- Daftar Pengawas -->
         <button class="supervisors-btn" onclick="toggleSupervisors()">Tampilkan Daftar Pengawas</button>
         <div class="supervisors-container" id="supervisors">
-            <h3>DAFTAR PENGAWAS</h3>
+            <h3 style="text-align:center;margin:10px 0;font-size:0.9rem;">DAFTAR PENGAWAS</h3>
             <table class="supervisors-table">
                 <thead>
                     <tr>
@@ -421,15 +464,10 @@
         
         <div class="signature">
             <div class="signature-box" style="text-align: left;">
+		    <div>Morotai Selatan, 17 Mei 2025</div>
                 <div>Mengetahui:</div>
                 <div>Kepala Sekolah,</div>
                 <div class="signature-name">SUAIB MARJAN, S.Pd.</div>
-                <div>NIP. -</div>
-            </div>
-            <div class="signature-box" style="text-align: right;">
-                <div>Morotai Selatan, 17 Mei 2025</div>
-                <div>Ketua Panitia PAS,</div>
-                <div class="signature-name">BADARUDIN KADERA</div>
                 <div>NIP. -</div>
             </div>
         </div>
