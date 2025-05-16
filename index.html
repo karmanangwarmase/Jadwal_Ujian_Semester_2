@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JADWAL PAS 2025 SMA Muhammadiyah 1 Pulau Morotai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 100%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        h1 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #7f8c8d;
+        }
+        .day-header {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .day-header:hover {
+            background-color: #2980b9;
+        }
+        .day-header .date {
+            font-weight: normal;
+            font-size: 0.9em;
+        }
+        .day-content {
+            display: none;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .signature {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .signature-box {
+            width: 45%;
+            margin-top: 20px;
+        }
+        .signature-name {
+            font-weight: bold;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+            padding-top: 5px;
+            display: inline-block;
+        }
+        .arrow {
+            transition: transform 0.3s;
+        }
+        .active .arrow {
+            transform: rotate(180deg);
+        }
+        .supervisors-btn {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .supervisors-btn:hover {
+            background-color: #27ae60;
+        }
+        .supervisors-container {
+            display: none;
+            margin-top: 15px;
+        }
+        .supervisors-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .supervisors-table th {
+            background-color: #e67e22;
+        }
+        @media (max-width: 600px) {
+            table {
+                font-size: 0.8rem;
+            }
+            th, td {
+                padding: 5px 3px;
+            }
+            .signature-box {
+                width: 100%;
+            }
+            .day-header {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JADWAL PENILAIAN AKHIR SEMESTER (PAS) GENAP</h1>
+        <h2>SMA MUHAMMADIYAH 1 PULAU MOROTAI<br>TAHUN PELAJARAN 2024/2025</h2>
+        
+        <!-- Senin -->
+        <div class="day-header" onclick="toggleDay('senin')">
+            <span>SENIN <span class="date">19 Mei 2025</span></span>
+            <span class="arrow">▼</span>
+        </div>
+        <div id="senin" class="day-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>JAM</th>
+                        <th>WAKTU</th>
+                        <th>X-MIPA</th>
+                        <th>X-IPS</th>
+                        <th>XI-MIPA</th>
+                        <th>XI-IPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>07.30-08.30</td>
+                        <td>PEND. AGAMA & BUDI PEKERTI (3)</td>
+                        <td>PEND. AGAMA & BUDI PEKERTI (4)</td>
+                        <td>PEND. AGAMA & BUDI PEKERTI (5)</td>
+                        <td>PEND. AGAMA & BUDI PEKERTI (6)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>08.30-09.30</td>
+                        <td>BAHASA INDONESIA (1)</td>
+                        <td>BAHASA INDONESIA (7)</td>
+                        <td>BAHASA INDONESIA (9)</td>
+                        <td>BAHASA INDONESIA (11)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Selasa -->
+        <div class="day-header" onclick="toggleDay('selasa')">
+            <span>SELASA <span class="date">20 Mei 2025</span></span>
+            <span class="arrow">▼</span>
+        </div>
+        <div id="selasa" class="day-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>JAM</th>
+                        <th>WAKTU</th>
+                        <th>X-MIPA</th>
+                        <th>X-IPS</th>
+                        <th>XI-MIPA</th>
+                        <th>XI-IPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>07.30-08.30</td>
+                        <td>MATEMATIKA WAJIB (1)</td>
+                        <td>MATEMATIKA WAJIB (5)</td>
+                        <td>MATEMATIKA WAJIB (7)</td>
+                        <td>MATEMATIKA WAJIB (13)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>08.30-09.30</td>
+                        <td>PPKN (2)</td>
+                        <td>PPKN (3)</td>
+                        <td>PPKN (6)</td>
+                        <td>PPKN (9)</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>10.00-11.00</td>
+                        <td>KIMIA (10)</td>
+                        <td>SEJARAH PEMINATAN (13)</td>
+                        <td>KIMIA (12)</td>
+                        <td>SEJARAH PEMINATAN (8)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Rabu -->
+        <div class="day-header" onclick="toggleDay('rabu')">
+            <span>RABU <span class="date">21 Mei 2025</span></span>
+            <span class="arrow">▼</span>
+        </div>
+        <div id="rabu" class="day-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>JAM</th>
+                        <th>WAKTU</th>
+                        <th>X-MIPA</th>
+                        <th>X-IPS</th>
+                        <th>XI-MIPA</th>
+                        <th>XI-IPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>07.30-08.30</td>
+                        <td>BAHASA INGGRIS (11)</td>
+                        <td>BAHASA INGGRIS (10)</td>
+                        <td>BAHASA INGGRIS (12)</td>
+                        <td>BAHASA INGGRIS (4)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>08.30-09.30</td>
+                        <td>PENJAS ORKES (5)</td>
+                        <td>PENJAS ORKES (1)</td>
+                        <td>PENJAS ORKES (8)</td>
+                        <td>PENJAS ORKES (9)</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>10.00-11.00</td>
+                        <td>MATEMATIKA PEMINATAN (6)</td>
+                        <td>EKONOMI (7)</td>
+                        <td>MATEMATIKA PEMINATAN (13)</td>
+                        <td>EKONOMI (3)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Kamis -->
+        <div class="day-header" onclick="toggleDay('kamis')">
+            <span>KAMIS <span class="date">22 Mei 2025</span></span>
+            <span class="arrow">▼</span>
+        </div>
+        <div id="kamis" class="day-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>JAM</th>
+                        <th>WAKTU</th>
+                        <th>X-MIPA</th>
+                        <th>X-IPS</th>
+                        <th>XI-MIPA</th>
+                        <th>XI-IPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>07.30-08.30</td>
+                        <td>BIOLOGI (13)</td>
+                        <td>GEOGRAFI (1)</td>
+                        <td>BIOLOGI (2)</td>
+                        <td>GEOGRAFI (13)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>08.30-09.30</td>
+                        <td>SEJARAH INDONESIA (8)</td>
+                        <td>SEJARAH INDONESIA (10)</td>
+                        <td>SEJARAH INDONESIA (12)</td>
+                        <td>SEJARAH INDONESIA (9)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Jumat -->
+        <div class="day-header" onclick="toggleDay('jumat')">
+            <span>JUMAT <span class="date">23 Mei 2025</span></span>
+            <span class="arrow">▼</span>
+        </div>
+        <div id="jumat" class="day-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>JAM</th>
+                        <th>WAKTU</th>
+                        <th>X-MIPA</th>
+                        <th>X-IPS</th>
+                        <th>XI-MIPA</th>
+                        <th>XI-IPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>07.30-08.30</td>
+                        <td>FISIKA (4)</td>
+                        <td>SOSIOLOGI (6)</td>
+                        <td>FISIKA (8)</td>
+                        <td>SOSIOLOGI (5)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>08.30-09.30</td>
+                        <td>SENI BUDAYA (13)</td>
+                        <td>SENI BUDAYA (1)</td>
+                        <td>SENI BUDAYA (3)</td>
+                        <td>SENI BUDAYA (9)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Sabtu -->
+        <div class="day-header" onclick="toggleDay('sabtu')">
+            <span>SABTU <span class="date">24 Mei 2025</span></span>
+            <span class="arrow">▼</span>
+        </div>
+        <div id="sabtu" class="day-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>JAM</th>
+                        <th>WAKTU</th>
+                        <th>X-MIPA</th>
+                        <th>X-IPS</th>
+                        <th>XI-MIPA</th>
+                        <th>XI-IPS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>07.30-08.30</td>
+                        <td>ISMUBA (2)</td>
+                        <td>ISMUBA (11)</td>
+                        <td>ISMUBA (4)</td>
+                        <td>ISMUBA (13)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>08.30-09.30</td>
+                        <td>PKWU (5)</td>
+                        <td>PKWU (10)</td>
+                        <td>PKWU (12)</td>
+                        <td>PKWU (9)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Daftar Pengawas -->
+        <button class="supervisors-btn" onclick="toggleSupervisors()">Tampilkan Daftar Pengawas</button>
+        <div class="supervisors-container" id="supervisors">
+            <h3>DAFTAR PENGAWAS</h3>
+            <table class="supervisors-table">
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>NAMA PENGAWAS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>HASRAT POPA, S.Pd.</td></tr>
+                    <tr><td>2</td><td>MUHAMAD HARFI, S.Pd</td></tr>
+                    <tr><td>3</td><td>KARMAN ANGWARMASE, S.Pd.</td></tr>
+                    <tr><td>4</td><td>WIDADA DJIMBULA, S.Pd.</td></tr>
+                    <tr><td>5</td><td>HAMDAN DJIMBULA, S.Pd.</td></tr>
+                    <tr><td>6</td><td>AMINA MAHMUD, S.Pd.</td></tr>
+                    <tr><td>7</td><td>MILDA ABDUL RAHMAN, S.Pd.</td></tr>
+                    <tr><td>8</td><td>NURBAYA JAILAN, S.Pd</td></tr>
+                    <tr><td>9</td><td>ALIFARDY LAMBUTU</td></tr>
+                    <tr><td>10</td><td>ANITA AKEME, S.Pd</td></tr>
+                    <tr><td>11</td><td>FANNI BASSO, S.Pd</td></tr>
+                    <tr><td>12</td><td>SUKMAWATI B. IBRAHIM, S.I.kom</td></tr>
+                    <tr><td>13</td><td>BASRI KUDO</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="signature">
+            <div class="signature-box" style="text-align: left;">
+                <div>Mengetahui:</div>
+                <div>Kepala Sekolah,</div>
+                <div class="signature-name">SUAIB MARJAN, S.Pd.</div>
+                <div>NIP. -</div>
+            </div>
+            <div class="signature-box" style="text-align: right;">
+                <div>Morotai Selatan, 17 Mei 2025</div>
+                <div>Ketua Panitia PAS,</div>
+                <div class="signature-name">BADARUDIN KADERA</div>
+                <div>NIP. -</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDay(dayId) {
+            const content = document.getElementById(dayId);
+            const header = content.previousElementSibling;
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                header.classList.remove("active");
+            } else {
+                content.style.display = "block";
+                header.classList.add("active");
+            }
+        }
+
+        function toggleSupervisors() {
+            const container = document.getElementById('supervisors');
+            const btn = document.querySelector('.supervisors-btn');
+            
+            if (container.style.display === "block") {
+                container.style.display = "none";
+                btn.textContent = "Tampilkan Daftar Pengawas";
+            } else {
+                container.style.display = "block";
+                btn.textContent = "Sembunyikan Daftar Pengawas";
+            }
+        }
+
+        // Buka hari pertama secara default
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('senin').style.display = "block";
+            document.querySelector('.day-header').classList.add("active");
+        });
+    </script>
+</body>
+</html>
